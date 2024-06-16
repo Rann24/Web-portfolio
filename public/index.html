@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Portfolio</title>
+    <link rel="stylesheet" href="/public/styles.css">
+    <style >
+         body{
+            background-color: yellow;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            background: white;
+            border: 4px solid black;
+        }
+     
+        .column {
+ float: left;
+  width: 40%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 40%;
+  padding: 5px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to My Portfolio</h1>
+        <p>This is a creative and welcoming introduction to my portfolio, showcasing my journey at KSU.</p>
+        <!-- Add more content as needed -->
+         <div class="row">
+            <div class =" column">
+    
+            <img src ="ksu.png" alt="logo" style="width: 80%;">
+        </div>
+        <div class="column">
+            <img src="scrappy.png"alt="mascot" style="width: 80%;">
+        </div>
+         </div>
+         
+    </main>
+</body>
+</html>
