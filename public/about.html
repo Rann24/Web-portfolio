@@ -4,40 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - My Portfolio</title>
-    <link rel="stylesheet" href="/public
-    /styles.css">
-
-    <style >
-        body{
+    <link rel="stylesheet" href="/public/styles.css">
+    <script defer src="/public/script.js"></script>
+    <style>
+        body {
             background-color: yellow;
             color: black;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-        h1{
+        h1 {
             background: white;
             border: 4px solid black;
-        }  .column {
- float: left;
-  width: 40%;
-  padding: 5px;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 40%;
-  padding: 5px;
-}
-
-
+        }
+        .column {
+            float: left;
+            width: 40%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .row {
+            display: flex;
+        }
+        .column {
+            flex: 40%;
+            padding: 5px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
-        </style>
 </head>
 <body>
     <header>
@@ -45,27 +73,31 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>All About Me</h1>
-        <p>Hello everyone my name is Randy Rice I am a Junior at Kennesaw State University.I major in Information Technology and a concentration in Cyber Security.My time at Kennesaw State University was intresting. I live off campus. I meet new people and tried diffrent activies that I coudnt do in Conyers were I use to live. </p>
-        <b>
-
-        </b>
-        <p>I tried moutain biking for the first time and that did not end so well for my legs. My hobbies are play games, building modeling kits,and praticing the guitar.I also have a pet cat and his name is Chrome aka the Ankle biter because he likes to sneak or do drive byes jumping at my feet. I had chrome for 9 months but he is 11 months old since I got him when he was 2 months.</p>
-        <!-- Add more content as needed -->
+        <p>Hello everyone, my name is Randy Rice. I am a Junior at Kennesaw State University. I major in Information Technology with a concentration in Cyber Security. My time at Kennesaw State University was interesting. I live off-campus. I meet new people and tried different activities that I couldn't do in Conyers where I used to live.</p>
+        <p>I tried mountain biking for the first time and that did not end so well for my legs. My hobbies are playing games, building modeling kits, and practicing the guitar. I also have a pet cat named Chrome, aka the Ankle Biter because he likes to sneak or do drive-bys jumping at my feet. I have had Chrome for 9 months, but he is 11 months old since I got him when he was 2 months.</p>
         <div class="row">
-            <div class =" column">
-    
-            <img src ="Chrome.jpg" alt="cat" style="width: 80%;">
+            <div class="column">
+                <img id="Chrome.jpg" src="Chrome.jpg" alt="cat" style="width: 80%;" data-description="This is Chrome, my pet cat. He is known as the Ankle Biter because he likes to sneak or do drive-bys jumping at my feet.">
+            </div>
+            <div class="column">
+                <img id="ya.jpg" src="ya.jpg" alt="music" style="width: 80%;" data-description="This is my music setup. I enjoy playing the guitar and practicing new songs.">
+            </div>
         </div>
-        <div class="column">
-            <img src="ya.jpg"alt="music" style="width: 80%;">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="Chrome.jpg" src="" alt="modal image" style="width: 100%;">
+                <p id="modalText"></p>
+            </div>
         </div>
-         </div>
     </main>
 </body>
 </html>

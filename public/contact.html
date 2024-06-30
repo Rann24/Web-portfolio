@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+    <style >
+        body{
+            background-color: yellow;
+            color: black;
+            font-family: 'Arial, sans-serif';
+        }
+        h1{
+            background: white;
+            border: 4px solid black;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Me</h1>
+
+         <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+
+
+
+        <form action="/contact" method="POST">
+            <div class ="form-group">
+                <label for="name" class="form-group">Name:</label>
+                <input type="text" class = "form-control" name ="name" id="name" >
+                </div>
+                <div class ="form-group">
+                    <label for="email" class="form-control">Email:</label>
+                    <input type="email" class = "form-control" name="email" id="email" aria-describedby="emailHelp">
+
+                </div>
+        
+                <div class ="form-group">
+                    <label for="message" class="form-control">Message:</label>
+                    <input type="message " class = "form-control" name="message " id="message">
+
+                </div>
+
+                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>
